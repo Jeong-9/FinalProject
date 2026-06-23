@@ -4,7 +4,7 @@
 <img width="499" height="301" alt="image" src="https://github.com/user-attachments/assets/fbc3699a-d8a2-4d69-a2f9-2241782b4f88" />
 
 
-- **프로젝트명**: chemibot: 비접촉 화학 실험 자동화 및 안전 관제 시스템
+- **프로젝트명**: chemibot 비접촉 화학 실험 자동화 및 안전 관제 시스템
 - **형태**: 팀 프로젝트
 - **개발 인원**: 5명
 
@@ -120,4 +120,4 @@
 - 실험실의 lab_intercom.py는 UDP 10000으로 수신한 보안실 음성을 실험실 스피커로 출력합니다.
 
 # 시연 영상
-
+https://youtu.be/Ujo4n_t4xfY
