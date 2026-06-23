@@ -29,7 +29,7 @@
 - **S/W 제작**: WPF, Flask, React
 - **사용 라이브러리**: MediaPipe, OpenCV, RandomForest
 
-- **통신**: TCP/IP, UDP , Socket.IO (WebSocket 기반), HTTP, UART Serial
+- **통신**: TCP/IP, UDP, Socket.IO (WebSocket 기반), HTTP, UART Serial
 - **임베디드 및 데이터베이스**: myCobot 280, Raspberry Pi 4B (myCobot 내장), Arduino Uno, MySQL
 
 # 하드웨어 구성도 
@@ -80,7 +80,7 @@
 ## 3. 아크릴 재단 및 조립
 <img width="372" height="292" alt="image" src="https://github.com/user-attachments/assets/acaf6bbd-f339-4acd-b9cc-417a2b9a7173" />
 
-- 완성된 도면을 기준으로 아크릴판을 재단하고 조립하여 실제 실험 공간을 제작했습니다.여기서 내부 유해 물질이 외부로 나가는 것을 방지하기 위해 외부 문과 내부 문으로 구성된 이중문 구조로 설계하고 조립했습니다.
+- 완성된 도면을 기준으로 아크릴판을 재단하고 조립하여 실제 실험 공간을 제작했습니다. 여기서 내부 유해 물질이 외부로 나가는 것을 방지하기 위해 외부 문과 내부 문으로 구성된 이중문 구조로 설계하고 조립했습니다.
 
 ## 4. 이중문 - 잠금장치, 내부 문 서보모터 제어
 
