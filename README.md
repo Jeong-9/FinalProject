@@ -29,7 +29,7 @@
 - **S/W 제작**: WPF, Flask, React
 - **사용 라이브러리**: MediaPipe, OpenCV, RandomForest
 
-- **통신**: TCP/IP/UDP , Socket.IO (WebSocket 기반), HTTP, UART Serial
+- **통신**: TCP/IP, UDP , Socket.IO (WebSocket 기반), HTTP, UART Serial
 - **임베디드 및 데이터베이스**: myCobot 280, Raspberry Pi 4B (myCobot 내장), Arduino Uno, MySQL
 
 # 하드웨어 구성도 
@@ -60,12 +60,12 @@
 |---|---|
 | `LabSafetyManager/MainWindow.xaml` | 보안실 WPF 화면 UI 구성 |
 | `LabSafetyManager/MainWindow.xaml.cs` | 영상 출력, 비상 처리, 상태 표시, 로그, 버튼 이벤트 처리 |
-| `LabSafetyManager/FallTcpClient.cs` | TCP 9999 영상 수신 및 UDP 9998 비상 신호 처리 |
-| `LabSafetyManager/IntercomService.cs` | 보안실 PC 마이크 음성을 UDP 10000으로 전송 |
+| `LabSafetyManager/FallTcpClient.cs` | TCP 기반 영상 수신 및 UDP 기반 비상 신호 처리 |
+| `LabSafetyManager/IntercomService.cs` | 보안실 PC 마이크 음성을 UDP 기반으로 전송 |
 | `LabSafetyManager/LogEntry.cs` | 이벤트 로그의 시간, 위험 단계, 메시지 관리 |
 | `Servo/door_control.py` | 내부문 및 잠금장치 서보모터 제어 |
-| `Servo/door_server.py` | TCP 9003 포트에서 서보 제어 명령 수신 |
-| `lab_intercom.py` | UDP 10000 음성 수신 및 실험실 스피커 음성 출력 |
+| `Servo/door_server.py` | TCP 기반 서보 제어 명령 수신 |
+| `lab_intercom.py` | UDP 기반 음성 수신 및 실험실 스피커 음성 출력 |
 
 # 구현한 하드웨어 기능
 ## 1. 실험실 아크릴 박스 설계 및 제작 준비
@@ -113,7 +113,7 @@
 - 이벤트 로그는 TCP 연결, 비상 감지, 경고 해제, 음성 송신 등 주요 이벤트를 시간 순서대로 기록합니다. 정보·주의·위험 단계에 따라 색상을 구분하여 표시합니다.
 - 시스템 상태에서 카메라 연결 상태와 비상 상태 여부를 확인할 수 있습니다.
 - 버튼 기능에서 경고 해제 버튼을 누르면 보안실 WPF의 비상 화면과 사이렌을 종료하고, UDP로 비상 해제(clear) 신호를 전송하여 통제실 감지 상태를 초기화합니다
-- 로그 저장 버튼은 이벤트 로그에 기록된 모든 상태와 감지 시각을 .txt파일로 저장할 수 있습니다.
+- 로그 저장 버튼은 이벤트 로그에 기록된 모든 상태와 감지 시각을 .txt 파일로 저장할 수 있습니다.
 
 ## 2. 비상상황 발생 시 비상 신호 수신 및 음성 안내
 ### 비상 상황 발생 시 보안실 화면
